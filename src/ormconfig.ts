@@ -2,8 +2,6 @@ import configs from './configs';
 
 const { DB_HOST, DB_PORT, DB_USERNAME, DB_PASSWORD, DB_DATABASE } = configs;
 
-console.log('configs', configs);
-
 export default {
   type: 'postgres',
   host: DB_HOST,

@@ -14,8 +14,6 @@ interface Configs {
   DB_DATABASE: string;
 }
 
-console.log('process.env', process.env);
-
 const configs: Configs = {
   NODE_ENV: (process.env.NODE_ENV || AppEnvType.DEVELOP) as AppEnvType,
   port: Number(process.env.PORT || 3000),
