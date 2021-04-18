@@ -1,11 +1,13 @@
 import { AppEnvType } from './types';
 
-interface ResultModule {
+interface Configs {
   NODE_ENV: AppEnvType;
   port: number;
 }
 
-export default {
-  NODE_ENV: process.env.NODE_ENV || AppEnvType.DEVELOP,
-  port: process.env.PORT || 3000,
-} as ResultModule;
+const configs: Configs = {
+  NODE_ENV: (process.env.NODE_ENV || AppEnvType.DEVELOP) as AppEnvType,
+  port: Number(process.env.PORT || 3000),
+};
+
+export default configs;

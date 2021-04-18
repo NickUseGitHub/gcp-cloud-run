@@ -1,7 +1,7 @@
 import fastify from 'fastify';
 
-import configs from './configs';
-import { AppEnvType } from './configs/types';
+import configs from '@configs/index';
+import { AppEnvType } from '@configs/types';
 
 const app = fastify({ logger: configs.NODE_ENV !== AppEnvType.PRODUCTION });
 
