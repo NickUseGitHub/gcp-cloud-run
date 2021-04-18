@@ -4,7 +4,8 @@
   "description": "### Comprise of - Cloud SQL - NodeJS - Mapping Domain",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "ts-node src/index.ts",
+    "dev:local": "ts-node src/index.ts",
+    "dev": "nodemon --exec 'yarn dev:local' ./src/**/*.ts",
     "build": "tsc",
     "start": "node dist",
     "lint": "eslint . --ext .ts",
@@ -31,6 +32,7 @@
     "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-prettier": "^3.4.0",
     "husky": "^6.0.0",
+    "nodemon": "^2.0.7",
     "prettier": "^2.2.1",
     "ts-node": "^9.1.1"
   },
