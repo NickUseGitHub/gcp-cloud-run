@@ -9,7 +9,7 @@ app.get('/', async () => {
   return { hello: 'world' };
 });
 
-export default async function start() {
+export default async function bootstrap() {
   try {
     const port = configs.port;
     console.log(`Server listen on port -- ${port}`);

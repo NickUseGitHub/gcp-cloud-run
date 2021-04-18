@@ -1,5 +1,4 @@
-require('dotenv').config();
 import './modulizer';
-import start from './app';
+import bootstrap from './app';
 
-start();
+bootstrap();

@@ -1,4 +1,8 @@
+import { config } from 'dotenv';
+import path from 'path';
 import { AppEnvType } from './types';
+
+config({ path: path.resolve(__dirname, '../.env') });
 
 interface Configs {
   NODE_ENV: AppEnvType;
