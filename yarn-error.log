@@ -1,0 +1,55 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/bin/yarn.js add -D @type/node
+
+PATH: 
+  /Users/chaiwattungtongsoontorn/google-cloud-sdk/bin:/usr/local/opt/php@7.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/chaiwattungtongsoontorn/google-cloud-sdk/bin:/usr/local/opt/php@7.3/bin:/Users/chaiwattungtongsoontorn/go/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/chaiwattungtongsoontorn/go/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  10.16.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@type%2fnode: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:66988:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:140749:22)
+      at Request.emit (events.js:198:13)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:141721:10)
+      at Request.emit (events.js:198:13)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:141643:12)
+      at Object.onceWrapper (events.js:286:20)
+      at IncomingMessage.emit (events.js:203:15)
+      at endReadableNT (_stream_readable.js:1145:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest: 
+  {
+    "name": "gcp-cloud-run",
+    "version": "1.0.0",
+    "description": "### Comprise of - Cloud SQL - NodeJS - Mapping Domain",
+    "main": "dist/index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/NickUseGitHub/gcp-cloud-run.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/NickUseGitHub/gcp-cloud-run/issues"
+    },
+    "homepage": "https://github.com/NickUseGitHub/gcp-cloud-run#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
