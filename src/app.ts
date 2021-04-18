@@ -3,12 +3,23 @@ import { Connection } from 'typeorm';
 
 import configs from '@configs/index';
 import { AppEnvType } from '@configs/types';
+
+import todoControllers from '@apis/todos/controllers/index';
+
 import initConnection from './database';
 
 const app = fastify({ logger: configs.NODE_ENV !== AppEnvType.PRODUCTION });
 
-app.get('/', async () => {
-  return { hello: 'world' };
+app.get('/healthcheck', async () => {
+  return 'ok';
+});
+
+todoControllers.forEach(function bindToApp(controller) {
+  const { method, url, handler } = controller;
+
+  if (method === 'GET') {
+    app.get(url, handler);
+  }
 });
 
 export default async function bootstrap() {
