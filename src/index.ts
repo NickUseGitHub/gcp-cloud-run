@@ -1,4 +1,18 @@
-import path from 'path';
+import fastify from 'fastify';
 
-const currentPath = path.resolve(__dirname);
-console.log(`Hello world from current director ${currentPath}`);
+const app = fastify({ logger: true });
+
+app.get('/', async () => {
+  return { hello: 'world' };
+});
+
+const start = async () => {
+  try {
+    await app.listen(3000);
+  } catch (err) {
+    app.log.error(err);
+    process.exit(1);
+  }
+};
+
+start();

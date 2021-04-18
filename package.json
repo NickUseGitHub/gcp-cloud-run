@@ -33,6 +33,7 @@
     "ts-node": "^9.1.1"
   },
   "dependencies": {
+    "fastify": "^3.14.2",
     "typescript": "^4.2.4"
   },
   "husky": {
