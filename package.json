@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "ts-node src/index.ts",
     "build": "tsc",
-    "start": "node dist"
+    "start": "node dist",
+    "lint": "eslint . --ext .ts"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,12 @@
   "homepage": "https://github.com/NickUseGitHub/gcp-cloud-run#readme",
   "devDependencies": {
     "@types/node": "^14.14.41",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.2.1",
     "ts-node": "^9.1.1"
   },
   "dependencies": {
