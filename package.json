@@ -4,7 +4,9 @@
   "description": "### Comprise of - Cloud SQL - NodeJS - Mapping Domain",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "ts-node src/index.ts"
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist"
   },
   "repository": {
     "type": "git",
