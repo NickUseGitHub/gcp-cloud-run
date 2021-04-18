@@ -19,6 +19,10 @@ todoControllers.forEach(function bindToApp(controller) {
 
   if (method === 'GET') {
     app.get(url, handler);
+  } else if (method === 'POST') {
+    app.post(url, handler);
+  } else if (method === 'DELETE') {
+    app.delete(url, handler);
   }
 });
 

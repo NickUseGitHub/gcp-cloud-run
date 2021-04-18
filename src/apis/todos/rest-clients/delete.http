@@ -1,0 +1,1 @@
+DELETE {{backendHost}}/apis/todos/2 HTTP/1.1

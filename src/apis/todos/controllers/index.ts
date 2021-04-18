@@ -22,6 +22,42 @@ const controllers: Controller[] = [
       return todoList;
     },
   },
+  {
+    method: 'POST',
+    url: '/apis/todos',
+    handler: async (request) => {
+      const { body } = request as {
+        body: {
+          name: string;
+          isDone: boolean;
+        };
+      };
+
+      const todo = Todo.create({
+        name: body.name,
+        isDone: Boolean(body.isDone),
+      });
+
+      await todo.save();
+
+      return body;
+    },
+  },
+  {
+    method: 'DELETE',
+    url: '/apis/todos/:id',
+    handler: async (request) => {
+      const { params } = request as {
+        params: {
+          id: string;
+        };
+      };
+
+      await Todo.delete(Number(params.id));
+
+      return {};
+    },
+  },
 ];
 
 export default controllers;

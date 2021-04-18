@@ -1,11 +1,11 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from 'typeorm';
 
 export const tableName = 'todo';
 
 @Entity({
   name: tableName,
 })
-export class Todo {
+export class Todo extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 

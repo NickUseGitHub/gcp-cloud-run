@@ -1,0 +1,7 @@
+POST {{backendHost}}/apis/todos HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Todo 3",
+  "isDone": false
+}
