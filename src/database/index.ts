@@ -9,5 +9,6 @@ export default async function initConnection(): Promise<Connection> {
     username: ormconfig.username,
     password: ormconfig.password,
     database: ormconfig.database,
+    entities: ormconfig.entities,
   });
 }

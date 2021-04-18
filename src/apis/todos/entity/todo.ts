@@ -1,6 +1,10 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
-@Entity()
+export const tableName = 'todo';
+
+@Entity({
+  name: tableName,
+})
 export class Todo {
   @PrimaryGeneratedColumn()
   id: number;
