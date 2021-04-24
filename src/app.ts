@@ -36,6 +36,8 @@ export default async function bootstrap() {
     await app.listen(port, '0.0.0.0');
   } catch (err) {
     connection && connection.close();
+    console.error(err.message);
+
     app.log.error(err);
     process.exit(1);
   }

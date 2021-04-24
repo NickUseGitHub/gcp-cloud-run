@@ -12,6 +12,8 @@ interface Configs {
   DB_USERNAME: string;
   DB_PASSWORD: string;
   DB_DATABASE: string;
+  DB_URL: string;
+  DB_EXTRA_HOST: string;
 }
 
 const configs: Configs = {
@@ -22,6 +24,8 @@ const configs: Configs = {
   DB_USERNAME: process.env.DB_USERNAME || 'postgres',
   DB_PASSWORD: process.env.DB_PASSWORD || '',
   DB_DATABASE: process.env.DB_DATABASE || 'dbapp',
+  DB_URL: process.env.DB_URL || '',
+  DB_EXTRA_HOST: process.env.DB_EXTRA_HOST || '',
 };
 
 export default configs;

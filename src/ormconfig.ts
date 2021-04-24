@@ -1,10 +1,9 @@
 import configs from './configs';
 
-const { DB_HOST, DB_PORT, DB_USERNAME, DB_PASSWORD, DB_DATABASE } = configs;
+const { DB_HOST, DB_PORT, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_URL, DB_EXTRA_HOST } = configs;
 
 export default {
   type: 'postgres',
-  host: DB_HOST,
   port: DB_PORT,
   username: DB_USERNAME,
   password: DB_PASSWORD,
@@ -14,4 +13,13 @@ export default {
   cli: {
     migrationsDir: 'migration',
   },
+  ...(DB_HOST ? { host: DB_HOST } : {}),
+  ...(DB_URL ? { url: DB_URL } : {}),
+  ...(DB_EXTRA_HOST
+    ? {
+        extra: {
+          host: DB_EXTRA_HOST,
+        },
+      }
+    : {}),
 };
