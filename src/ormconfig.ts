@@ -9,8 +9,8 @@ export default {
   username: DB_USERNAME,
   password: DB_PASSWORD,
   database: DB_DATABASE,
-  entities: ['./**/entity/*.ts'],
-  migrations: ['migration/*.ts'],
+  entities: [`${__dirname}/**/entity/*.ts`, `${__dirname}/**/entity/*.js`],
+  migrations: [`${__dirname}/migration/*.ts`, `${__dirname}/migration/*.js`],
   cli: {
     migrationsDir: 'migration',
   },

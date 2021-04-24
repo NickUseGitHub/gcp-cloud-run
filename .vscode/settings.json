@@ -8,6 +8,9 @@
     "$shared": {},
     "local": {
       "backendHost": "http://localhost:3001"
+    },
+    "docker": {
+      "backendHost": "http://localhost:3002"
     }
   }
 }

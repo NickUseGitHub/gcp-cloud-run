@@ -33,7 +33,7 @@ export default async function bootstrap() {
     const port = configs.port;
     console.log(`Server listen on port -- ${port}`);
 
-    await app.listen(port);
+    await app.listen(port, '0.0.0.0');
   } catch (err) {
     connection && connection.close();
     app.log.error(err);
